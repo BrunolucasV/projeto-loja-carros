@@ -11,5 +11,5 @@ Este projeto é uma aplicação web de **loja de vendas de carros**, construída
 - Python 3.11
 - Flask
 - Flask-CORS
-- pydantic
+- Pydantic
 ---
