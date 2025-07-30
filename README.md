@@ -12,4 +12,5 @@ Este projeto é uma aplicação web de **loja de vendas de carros**, construída
 - Flask
 - Flask-CORS
 - Pydantic
+- Blueprint
 ---
