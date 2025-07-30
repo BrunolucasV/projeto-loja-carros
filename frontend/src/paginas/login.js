@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // 👈 importa o hook
+import { useNavigate } from "react-router-dom"; //  importa o hook
 
 function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [mensagem, setMensagem] = useState("");
-  const navigate = useNavigate(); // 👈 inicializa o hook
+  const navigate = useNavigate(); //  inicializa o hook
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -13,7 +13,7 @@ function Login() {
     // Lógica simples de verificação (substitua por chamada real ao backend depois)
     if (email === "admin@email.com" && senha === "123") {
       setMensagem("Login bem-sucedido!");
-      navigate("/carros"); // 👈 redireciona para /carros
+      navigate("/carros"); //  redireciona para /carros
     } else {
       setMensagem("Email ou senha inválidos.");
     }

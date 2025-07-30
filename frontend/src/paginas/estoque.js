@@ -14,7 +14,7 @@ function Estoque() {
       const dados = await resposta.json();
 
       if (resposta.ok) {
-        setVeiculos(dados);  // <-- Correto: carrega todos os veículos do banco
+        setVeiculos(dados);  
       } else {
         setMensagem("Erro ao carregar veículos.");
         console.error(dados.erro || dados);
