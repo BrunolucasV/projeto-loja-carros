@@ -43,9 +43,23 @@ function CadastroCliente() {
       <h2>Cadastro de Cliente</h2>
       <form onSubmit={handleSubmit}>
         <input name="nome" value={cliente.nome} onChange={handleChange} placeholder="Nome" required />
-        <input name="cpf" value={cliente.cpf} onChange={handleChange} placeholder="CPF" required />
+        <input
+            name="cpf"
+            value={cliente.cpf}
+            onChange={(e) => {
+              // Remove tudo que não for número
+              const valorNumerico = e.target.value.replace(/\D/g, "");
+              setCliente({ ...cliente, cpf: valorNumerico });
+            }}
+            placeholder="CPF"
+            required
+            maxLength={11}
+          />
         <input name="email" value={cliente.email} onChange={handleChange} placeholder="Email" required />
-        <input name="telefone" value={cliente.telefone} onChange={handleChange} placeholder="Telefone" required />
+        <input name="telefone" value={cliente.telefone}  onChange={(e) => {
+              const valorNumerico = e.target.value.replace(/\D/g, "");
+              setCliente({ ...cliente, telefone: valorNumerico });
+            }}placeholder="Telefone" required maxLength={11} />
         <button type="submit">Cadastrar</button>
       </form>
       {mensagem && <p>{mensagem}</p>}
